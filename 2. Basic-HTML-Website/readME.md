@@ -1,8 +1,8 @@
-# A Single-Page CV html file
+# A Basic HTML website
 
-<a href="https://roadmap.sh/projects/single-page-cv">Click Here for More</a>
+<a href="https://roadmap.sh/projects/basic-html-website">Click Here for More</a>
 
-<p>The goal of this project is to teach you how to create a structured, single-page CV using only HTML. You will focus on laying out your education, skills, and career history in a clean, semantic manner. Styling will be addressed in a later project.</p>
+<p>The goal of this project is to teach you how to structure a website using HTML i.e. different sections of a website like header, footer, navigation, main content, sidebars etc. Do not style the website, only focus on the structure. Styling will be done in separate projects.</p>
 
 ## Instructions:
 <ul>
@@ -14,3 +14,5 @@
         <li> Make analysis to the work done (criticism and praise) {<a href="mailto:farhan.segujja@gmail.com">farhan.segujja@gmail.com</a>}
     </ul>
 </ul>
+
+
