@@ -1,0 +1,123 @@
+body{
+    font-family: Smooch sans;
+    font-size: 1.5em;
+    margin: 5;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 2px;
+    justify-content: space-between;
+}
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+header a{
+    text-decoration: none;
+    color: purple;
+}
+.navigation {
+    display: flex;               /* row layout by default */
+    list-style-type: none;
+    padding-right: 20px;
+    margin: 0;
+    padding: 0;
+    gap: 1em;                    /* space between links */
+}
+.navigation li + li::before{
+    content: "/ ";
+}
+#role {
+    text-align: center;
+    font-size: 3em;
+}
+.midSections{
+    border: 2px solid;
+    min-width: 30%;
+    margin: 0 0 1.1rem 0;
+    border-radius: 5px;
+}
+.projects{
+    display: inline-block;
+    padding-left: 0;
+    border: 3px solid magnta;
+    width: 100%;
+    margin: 0;
+}
+.projects li {
+    display: block;
+    border: 2px solid;
+    min-width: 100%;
+    border-left: 0;
+    margin: 0;
+    list-style-type: none;
+}
+.midSections h2,h3,p,a {
+    margin: 20px 30px;
+}
+#maincontent{
+    display: flex;
+    justify-content: space-evenly;
+}
+#reviews{
+    display: flex;
+    justify-content: space-between;
+}
+#reviews div {
+    padding: 20px;
+    border: solid;
+    margin: 30px;
+    border-radius: 30px;
+}
+#copyright {
+    text-align: center;
+    padding: 100px;
+}
+footer {
+    border: solid 2px gray;
+    border-radius: 10px;
+}
+footer h3 {
+    margin-left: 30px;
+}
+.trRole, .teacher{
+    opacity: 35%;
+    margin: 0;
+    margin-left: 30px;
+}
+/* responsive adjustments */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navigation {
+        width: 100%;            /* span whole header width */
+        justify-content: space-around;
+        flex-wrap: wrap;        /* allow links to wrap onto multiple lines */
+        padding: 0.5em 0;
+    }
+    .navigation li {
+        margin: 0.25em 0;
+    }
+    .navigation li + li::before {
+        content: ""; /* remove slash on stacked layout */
+    }
+    #reviews{
+        display: flex;
+        flex-flow: column wrap;
+    }
+    #maincontent{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex: 0 0 500px;
+    }
+    .midSections {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0 0 300px;
+    }
+}
