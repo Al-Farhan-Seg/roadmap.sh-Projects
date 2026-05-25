@@ -1,9 +1,12 @@
 :root{
     /* */
-    --color1: hsl(190, 40%, 60%);
-    --color2: hsl(190, 50%, 50%);
-    --color3: hsl(190, 60%, 40%);
-    --words-color1: hsla(334, 80%, 11%, 1);
+    --color1: hsl(47, 25%, 65%);
+    --color2: hsla(47, 35%, 45%, 1);
+    --color3: hsla(47, 45%, 25%, 1);
+
+    --words-color1: hsla(239, 93%, 7%, 1);
+
+    --words-color2: hsl(35, 45%, 12%);
     --heading-font: Chewy, cursive;
     --text-font: Quicksand, sans-serif;
     
@@ -18,10 +21,16 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    background: linear-gradient(to bottom right, hsl(180, 100%, 30%), hsl(180, 80%, 50%), hsl(180, 60%, 70%), white);
+    background: repeating-linear-gradient(
+        to bottom right, 
+        hsl(180, 100%, 30%) 0 20px, 
+        hsl(180, 80%, 50%) 20px 40px, 
+        hsl(180, 60%, 70%) 40px 60px
+    ) ;
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;
+    backdrop-filter: opacity(70%);
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
@@ -33,7 +42,18 @@ header {
     align-items: center;
     min-height: 10vh;
     padding: 5px;
-    margin: 5px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border: 2px solid var(--words-color2);
+    border-radius: 0 0 10px 10px;
+    background: radial-gradient(
+        circle at bottom right, 
+        var(--color1), 
+        var(--color2), 
+        var(--color3)
+    );
     /* border: 2px solid; */
 }
 header > img,
@@ -59,12 +79,19 @@ header > img,
 }
 #title {
     text-align: center;
-    margin: 50px;
+    margin: 50px 20px;
     padding: 150px;
     font-size: 4rem;
-    background: radial-gradient(circle at bottom right, var(--color1), var(--color2), var(--color3));
+    background: radial-gradient(
+        circle at bottom right, 
+        var(--color1), 
+        var(--color2), 
+        var(--color3)
+    );
+    filter: blur(1px);
     border-radius: 20px;
     color: var(--words-color1);
+    border: 2px solid var(--words-color2);
 }
 #proj {
     font-size: 2.5rem;
@@ -86,7 +113,13 @@ header > img,
     border-image: linear-gradient(var(--color3), var(--color1));
 }
 .project-container {
-    background: radial-gradient(circle at top left, hsl(190, 45%, 21%), var(--color2), hsl(190, 76%, 31%));
+    background: radial-gradient(
+        circle at bottom right, 
+        var(--color1), 
+        var(--color2), 
+        var(--color3)
+    );
+    border: 2px solid var(--words-color2);
     border-radius: 15px;
     flex-shrink: 1;
     margin: 10px;
