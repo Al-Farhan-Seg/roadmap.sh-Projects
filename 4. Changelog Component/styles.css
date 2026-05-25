@@ -15,6 +15,9 @@
         margin: 0 ;
         font-family: Arial, Helvetica, sans-serif;
     }
+    body {
+        background-color: hsl(225, 11%, 15%);
+    }
     #container {
         border: 2px solid hsla(0, 0%, 33%, 1);
         padding: 2rem;
@@ -22,13 +25,14 @@
         width: min(90vw, 600px);
         min-height: 95vh;
         border-radius: 10px;
+        background-color: white;
     }
     #top-text, #top-brief{
         text-align: center;
         padding: 5px;
     }
     #top-brief {
-        color: hsla(0, 0%, 67%, 1);
+        color: hsla(95, 87%, 13%, 1);
     }
     .cg {
         position: relative;
@@ -63,7 +67,7 @@
         margin-left: -5px;
     }
     .changelog .changelog-date {
-        color: hsla(0, 0%, 67%, 1);
+        color: hsla(95, 87%, 13%, 1);
         text-align: left;
         /*border: 2px solid;*/
         display: inline-block;

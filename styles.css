@@ -1,0 +1,103 @@
+:root{
+    /* */
+    --color1: hsl(190, 40%, 60%);
+    --color2: hsl(190, 50%, 50%);
+    --color3: hsl(190, 60%, 40%);
+    --words-color1: hsla(334, 80%, 11%, 1);
+    --heading-font: Chewy, cursive;
+    --text-font: Quicksand, sans-serif;
+    
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--text-font);
+}
+html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+body {
+    background: linear-gradient(to bottom right, hsl(180, 100%, 30%), hsl(180, 80%, 50%), hsl(180, 60%, 70%), white);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10vh;
+    padding: 5px;
+    margin: 5px;
+    /* border: 2px solid; */
+}
+header > img,
+#header-end img {
+  height: calc(10vh - 10px);
+  width: auto;
+  object-fit: contain;
+}
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+#navbar a {
+    text-decoration: none;
+    color: var(--words-color1);
+    font-size: 2rem;
+    margin: 5px;
+    font-style: italic;
+    font-weight: 600;
+}
+#title {
+    text-align: center;
+    margin: 50px;
+    padding: 150px;
+    font-size: 4rem;
+    background: radial-gradient(circle at bottom right, var(--color1), var(--color2), var(--color3));
+    border-radius: 20px;
+    color: var(--words-color1);
+}
+#proj {
+    font-size: 2.5rem;
+    text-align: center;
+}
+#projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+.project-img {
+    height: 200px;
+    width: 355px;
+    border-radius: 15px;
+    margin: 15px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(var(--color3), var(--color1));
+}
+.project-container {
+    background: radial-gradient(circle at top left, hsl(190, 45%, 21%), var(--color2), hsl(190, 76%, 31%));
+    border-radius: 15px;
+    flex-shrink: 1;
+    margin: 10px;
+}
+.project-container a{
+    text-decoration: none;
+}
+.project-container p {
+    font-weight: bold;
+}
+.project-name {
+    text-align: center;
+    margin: 10px auto;
+}
