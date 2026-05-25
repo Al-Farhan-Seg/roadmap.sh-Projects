@@ -1,14 +1,14 @@
 :root{
     /* */
-    --color1: hsl(47, 25%, 65%);
-    --color2: hsla(47, 35%, 45%, 1);
-    --color3: hsla(47, 45%, 25%, 1);
+    --color1: hsl(180, 25%, 65%);
+    --color2: hsla(180, 35%, 45%, 1);
+    --color3: hsla(180, 45%, 25%, 1);
 
-    --words-color1: hsla(239, 93%, 7%, 1);
+    --words-color1: whitesmoke;
 
-    --words-color2: hsl(35, 45%, 12%);
-    --heading-font: Chewy, cursive;
-    --text-font: Quicksand, sans-serif;
+    --words-color2: whitesmoke;
+    --heading-font: "Chewy", cursive;
+    --text-font: "Quicksand", sans-serif;
     
 }
 * {
@@ -56,12 +56,28 @@ header {
     );
     /* border: 2px solid; */
 }
+.logo-link,
+#header-end a {
+  height: calc(10vh - 10px);
+  display: flex;
+  align-items: center;
+}
+
+.logo-link img,
+#header-end img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+/*
 header > img,
 #header-end img {
   height: calc(10vh - 10px);
   width: auto;
   object-fit: contain;
 }
+*/
 #navbar {
     display: flex;
     flex-direction: row;
@@ -88,13 +104,12 @@ header > img,
         var(--color2), 
         var(--color3)
     );
-    filter: blur(1px);
     border-radius: 20px;
     color: var(--words-color1);
     border: 2px solid var(--words-color2);
 }
 #proj {
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-align: center;
 }
 #projects {
