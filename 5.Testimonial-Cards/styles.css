@@ -1,0 +1,146 @@
+:root {
+    --border-rad: 15px;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+.device-error {
+    display: none;
+}
+
+.bubble-testimony, 
+.box-testimony,
+.single-image,
+.text-only-testimony,
+.full-width-testimony {
+    border: 1px solid magenta;
+    border-radius: var(--border-rad);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    border: 2px solid crimson;
+    width: 45vw;
+    margin: auto;
+    padding: 15px;
+    border-radius: var(--border-rad);
+}
+
+.top-row, .mid-row, .bottom-row {
+    /* border: 2px solid black;*/
+    height: 250px;
+    width: 100%;
+    border-radius: var(--border-rad);
+}
+/* Each individual Row */
+.top-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+.mid-row{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.bottom-row {
+    height: 300px;
+}
+
+/* Each Individual Card */
+/*-------------------------------------*/
+.bubble-testimony {
+    height: 100%;
+    width: 50%;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+.bubble {
+    border: 2px solid tomato;
+    border-radius: var(--border-rad);
+    flex: 0.6;
+    position: relative;
+}
+.bubble::before {
+    content: '';
+    position: absolute;
+    border-top: 15px solid tomato;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    top: 100%;
+    left: 10%;
+}
+.bubble-person {
+    border: 2px solid tomato;
+    border-radius: var(--border-rad);
+    flex: 0.4;
+}
+
+/*-------------------------------------*/
+.box-testimony {
+    height: 100%;
+    width: 50%;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.box {
+    border: 2px solid tomato;
+    border-radius: var(--border-rad);
+    flex: 0.5;
+    position: relative;
+}
+.box-person {
+    border: 2px solid tomato;
+    border-radius: var(--border-rad);
+    flex: 0.5;
+}
+
+/*-------------------------------------*/
+.single-image {
+    height: 100%;
+    flex: 1;
+}
+.single-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-rad);
+}
+
+/*-------------------------------------*/
+.text-only-testimony {
+    height: 100%;
+    flex: 2;
+    padding: 20px;
+}
+
+.full-width-testimony {
+    height: 100%;
+}
+
+
+
+/* -------------------------------------------*/
+/* Mobile View Styles */
+@media only screen and (max-width: 480px) {
+    
+}
